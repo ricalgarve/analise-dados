@@ -65,3 +65,4 @@ def baixar_e_padronizar_dados():
 
 if __name__ == "__main__":
     baixar_e_padronizar_dados()
+

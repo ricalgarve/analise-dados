@@ -8,6 +8,7 @@ Os projetos utilizam bases de dados reais e aplicadas ao contexto brasileiro —
 
 ## Projetos
 
+- **[inadimplencia_credito/](inadimplencia_credito/)**: Base de dados real com 16.650 solicitações de cartão de crédito e crédito pessoal para modelagem de risco e predição de inadimplência (Credit Scoring / Default). Inclui variáveis socioeconômicas, estabilidade de emprego e desbalanceamento realista de classes (2,34% de taxa de inadimplência).
 - **[mercado_imobiliario_brasil/](mercado_imobiliario_brasil/)**: Análise e precificação imobiliária preditiva baseada em 10.692 anúncios reais de locação em São Paulo, Rio de Janeiro, Belo Horizonte, Porto Alegre e Campinas. Inclui pipeline completo de Machine Learning com tratamento de outliers, engenharia de variáveis (sem vazamento de dados), comparação entre Regressão Ridge e Random Forest, métricas de regressão (MAE, RMSE, $R^2$) e simulação de precificação de mercado.
 - **[infogripe_fiocruz/](infogripe_fiocruz/)**: Vigilância epidemiológica de Síndrome Respiratória Aguda Grave (SRAG) e circulação de vírus respiratórios (SARS-CoV-2, Influenza A/B, VSR, Rinovírus) com dados oficiais do InfoGripe (Fiocruz / Ministério da Saúde). Inclui script para download automatizado das séries temporais e visualizações de evolução temporal e comparações por UF.
 - **[expectativa_vida_sus/](expectativa_vida_sus/)**: Estudo demográfico de mortalidade e expectativa de vida no Brasil utilizando microdados do Sistema de Informações sobre Mortalidade (SIM/DATASUS) integrados via biblioteca `PySUS` e projeções populacionais do IBGE.
