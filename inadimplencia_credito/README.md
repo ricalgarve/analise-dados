@@ -42,3 +42,4 @@ Este diretório concentra a base de dados tratada e estruturada, pronta para fut
 - **Total de registros:** 16.650 proponentes
 - **Taxa de inadimplência:** 2,34% (390 inadimplentes)
 - **Desafio analítico:** Por se tratar de um problema real de concessão de crédito, a base apresenta o desbalanceamento clássico do setor financeiro, sendo ideal para aplicar técnicas de balanceamento (SMOTE, subamostragem), otimização de ponto de corte (*threshold*) e avaliação por métricas de negócio como **ROC-AUC**, **Recall**, **Precision** e estatística **KS** (*Kolmogorov-Smirnov*).
+
