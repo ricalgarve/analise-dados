@@ -21,3 +21,4 @@ Para reproduzir a leitura a partir da base bruta:
 1. Acesse o portal de [Dados Abertos do TSE](https://dadosabertos.tse.jus.br/).
 2. Baixe o arquivo de votação por seção eleitoral desejado.
 3. Extraia o arquivo CSV nesta pasta mantendo o nome `votacao_secao_2026_BR.csv` (ou altere o caminho correspondente na primeira célula do notebook).
+

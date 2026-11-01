@@ -7,3 +7,4 @@ ipykernel
 pysus
 pyarrow
 fastparquet
+scikit-learn

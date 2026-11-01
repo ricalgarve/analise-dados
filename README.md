@@ -1,13 +1,14 @@
 # Análise de Dados em Python
 
-Repositório com estudos práticos e projetos de análise de dados, estatística descritiva e visualização em Python. 
+Repositório com estudos práticos e projetos de análise de dados, estatística descritiva, visualização e modelagem preditiva (Machine Learning) em Python. 
 
-Os projetos utilizam bases de dados reais — tanto públicas quanto acadêmicas — cobrindo áreas como saúde pública, vigilância epidemiológica, dados eleitorais e introdução a machine learning.
+Os projetos utilizam bases de dados reais e aplicadas ao contexto brasileiro — cobrindo áreas como mercado imobiliário, saúde pública, vigilância epidemiológica, dados eleitorais e introdução a machine learning.
 
 ---
 
 ## Projetos
 
+- **[mercado_imobiliario_brasil/](mercado_imobiliario_brasil/)**: Análise e precificação imobiliária preditiva nas principais capitais brasileiras (com métricas calibradas pelo FipeZAP). Inclui pipeline completo de Machine Learning com pré-processamento, engenharia de variáveis, comparação entre Regressão Linear e Random Forest, avaliação com métricas reais (MAE, RMSE, $R^2$) e análise de importância de atributos.
 - **[infogripe_fiocruz/](infogripe_fiocruz/)**: Vigilância epidemiológica de Síndrome Respiratória Aguda Grave (SRAG) e circulação de vírus respiratórios (SARS-CoV-2, Influenza A/B, VSR, Rinovírus) com dados oficiais do InfoGripe (Fiocruz / Ministério da Saúde). Inclui script para download automatizado das séries temporais e visualizações de evolução temporal e comparações por UF.
 - **[expectativa_vida_sus/](expectativa_vida_sus/)**: Estudo demográfico de mortalidade e expectativa de vida no Brasil utilizando microdados do Sistema de Informações sobre Mortalidade (SIM/DATASUS) integrados via biblioteca `PySUS` e projeções populacionais do IBGE.
 - **[titanic/](titanic/)**: Análise exploratória e visualização de dados baseada no clássico dataset de passageiros do Titanic, seguindo a estrutura do minicurso da USP/ESALQ ministrado pelo Prof. Dr. Wilson Tarantin Junior. Aborda estatística descritiva completa, tabelas de contingência e gráficos com Seaborn e Matplotlib.
@@ -19,6 +20,7 @@ Os projetos utilizam bases de dados reais — tanto públicas quanto acadêmicas
 
 - **Linguagem:** Python (3.11+)
 - **Manipulação e Análise:** Pandas, NumPy, OpenPyXL
+- **Machine Learning:** Scikit-Learn
 - **Visualização Gráfica:** Matplotlib, Seaborn
 - **Dados de Saúde Pública:** PySUS, PyArrow, Fastparquet
 - **Ambiente de Trabalho:** Jupyter Notebook / VS Code
