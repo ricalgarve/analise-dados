@@ -1,5 +1,5 @@
 """
-Download e padronizacao da base real de risco de credito e inadimplencia.
+Download e padronizacao da base real de risco de credito e inadimplencia para a CredTech Brasil.
 Origem: Microdados de proponentes de cartao de credito (Credit Scoring / Default).
 Contem 16.650 solicitacoes com dados cadastrais, perfil socioeconomico e status de inadimplencia.
 Todas as categorias descritivas sao traduzidas e padronizadas em Portugues.
