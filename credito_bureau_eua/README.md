@@ -8,6 +8,7 @@ O objetivo da competição era construir um modelo capaz de prever com dois anos
 
 ## Estrutura da Pasta
 
+- [analise_credito_bureau.ipynb](analise_credito_bureau.ipynb): Notebook Jupyter com o carregamento da base (local ou GitHub), inspeção de tipagem, diagnóstico de dados ausentes e distribuição da inadimplência.
 - `dados/`:
   - `give_me_some_credit.csv`: Base com 150.000 registros já traduzida e padronizada em português.
 - [download_dados.py](download_dados.py): Script Python para baixar e padronizar novamente a base a partir da fonte pública.
@@ -41,3 +42,4 @@ O objetivo da competição era construir um modelo capaz de prever com dois anos
   - `qtd_dependentes`: 3.924 registros sem informação (~2,6%)
 - **Fonte:** Competição Kaggle — [Give Me Some Credit (2011)](https://www.kaggle.com/competitions/GiveMeSomeCredit)
 - **Desafio analítico:** Volume elevado (150k), desbalanceamento de classes real, outliers expressivos em variáveis de utilização e endividamento, e a necessidade de estratégia de imputação de dados ausentes tornam esta base um benchmark clássico para modelos de *Credit Scoring* com **Regressão Logística**, **Gradient Boosting** e **XGBoost**.
+

@@ -51,3 +51,4 @@ def baixar_e_padronizar():
 
 if __name__ == "__main__":
     baixar_e_padronizar()
+
