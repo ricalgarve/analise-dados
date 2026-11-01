@@ -1,0 +1,33 @@
+# Ambientes Virtuais
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Byte-compiled / otimizados do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# VS Code e IDEs
+.vscode/
+.idea/
+
+# Arquivos de sistema
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Logs e temporários
+*.log
+
+# Bases de dados volumosas (> 100MB - limite do GitHub)
+votacao_presidente_2026_secao/*.csv
+expectativa_vida_sus/dados/
