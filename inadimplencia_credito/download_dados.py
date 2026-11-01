@@ -2,6 +2,7 @@
 Download e padronizacao da base real de risco de credito e inadimplencia.
 Origem: Microdados de proponentes de cartao de credito (Credit Scoring / Default).
 Contem 16.650 solicitacoes com dados cadastrais, perfil socioeconomico e status de inadimplencia.
+Todas as categorias descritivas sao traduzidas e padronizadas em Portugues.
 """
 
 import os
@@ -44,7 +45,46 @@ def baixar_e_padronizar():
     }
     df = df.rename(columns=mapeamento_colunas).copy()
 
-    # Mapeamentos para clareza
+    # Tradução de valores em inglês para português
+    mapa_renda = {
+        "Working": "Assalariado",
+        "Commercial associate": "Empresário / Comercial",
+        "State servant": "Servidor público",
+        "Pensioner": "Pensionista / Aposentado",
+        "Student": "Estudante"
+    }
+
+    mapa_instrucao = {
+        "Secondary / secondary special": "Ensino médio",
+        "Higher education": "Ensino superior",
+        "Incomplete higher": "Superior incompleto",
+        "Lower secondary": "Ensino fundamental",
+        "Academic degree": "Pós-graduação"
+    }
+
+    mapa_estado_civil = {
+        "Married": "Casado",
+        "Single / not married": "Solteiro",
+        "Civil marriage": "União estável",
+        "Widow": "Viúvo",
+        "Separated": "Separado / Divorciado"
+    }
+
+    mapa_moradia = {
+        "House / apartment": "Casa / Apartamento próprio",
+        "Rented apartment": "Aluguel",
+        "Municipal apartment": "Habitação pública",
+        "With parents": "Com os pais",
+        "Co-op apartment": "Cooperativa habitacional",
+        "Office apartment": "Apartamento funcional"
+    }
+
+    df["tipo_renda"] = df["tipo_renda"].map(mapa_renda).fillna(df["tipo_renda"])
+    df["grau_instrucao"] = df["grau_instrucao"].map(mapa_instrucao).fillna(df["grau_instrucao"])
+    df["estado_civil"] = df["estado_civil"].map(mapa_estado_civil).fillna(df["estado_civil"])
+    df["tipo_moradia"] = df["tipo_moradia"].map(mapa_moradia).fillna(df["tipo_moradia"])
+
+    # Padronização de binários e numéricos
     df["posse_veiculo"] = df["posse_veiculo"].map({"Y": "Sim", "N": "Não"}).fillna("Não")
     df["posse_imovel"] = df["posse_imovel"].map({"Y": "Sim", "N": "Não"}).fillna("Não")
     df["inadimplente"] = df["inadimplente"].astype(int)  # 1 = Inadimplente, 0 = Adimplente
@@ -52,11 +92,14 @@ def baixar_e_padronizar():
     df["tempo_emprego_anos"] = df["tempo_emprego_anos"].round(1)
     df["qtd_pessoas_residencia"] = df["qtd_pessoas_residencia"].astype(int)
 
+    # Salvando com codificação utf-8 explícita
     df.to_csv(caminho_csv, index=False, encoding="utf-8")
-    print(f"-> Base salva com sucesso em: {caminho_csv}")
+    print(f"-> Base traduzida e salva com sucesso em: {caminho_csv}")
     print(f"-> Linhas: {len(df):,} | Colunas: {list(df.columns)}")
-    print(f"-> Taxa de inadimplentes: {df['inadimplente'].mean()*100:.2f}% ({df['inadimplente'].sum()} casos)")
+    print(f"-> Categorias de tipo_renda: {df['tipo_renda'].unique().tolist()}")
+    print(f"-> Categorias de grau_instrucao: {df['grau_instrucao'].unique().tolist()}")
+    print(f"-> Categorias de estado_civil: {df['estado_civil'].unique().tolist()}")
+    print(f"-> Categorias de tipo_moradia: {df['tipo_moradia'].unique().tolist()}")
 
 if __name__ == "__main__":
     baixar_e_padronizar()
-
