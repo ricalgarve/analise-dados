@@ -8,3 +8,4 @@ pysus
 pyarrow
 fastparquet
 scikit-learn
+jupyter-ai
