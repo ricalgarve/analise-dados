@@ -11,8 +11,7 @@ Write-Host "Ativando ambiente virtual..."
 & .\.venv\Scripts\Activate.ps1
 
 Write-Host "`nInstalando dependencias do requirements.txt..."
-python -m pip install --upgrade pip
-pip install -r requirements.txt
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
 
 Write-Host "`n=========================================="
 Write-Host "Ambiente Python 3.11 pronto e ativado!"

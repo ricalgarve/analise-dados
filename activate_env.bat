@@ -12,11 +12,10 @@ if not exist ".venv" (
 REM Ativa o ambiente virtual
 call .venv\Scripts\activate.bat
 
-REM Atualiza pip e instala dependencias
+REM Instala dependencias chamando o python do proprio venv
 echo.
 echo Instalando dependencias do requirements.txt...
-python -m pip install --upgrade pip
-pip install -r requirements.txt
+.venv\Scripts\python.exe -m pip install -r requirements.txt
 
 echo.
 echo ==========================================
